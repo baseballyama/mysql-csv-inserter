@@ -4,15 +4,6 @@ import Constants
 
 CSV_FILE_PATH = "csv/data.csv"
 
-mysql_config = {
-    'user': Constants.USER,
-    'password': Constants.PASSWORD,
-    'host': Constants.HOST,
-    'port': Constants.PORT,
-    'database': Constants.DATABASE_NAME,
-    'charset': 'utf8'
-}
-
 
 def main():
     connection = mysql.connector.connect(user=Constants.USER, password=Constants.PASSWORD, host=Constants.HOST,
