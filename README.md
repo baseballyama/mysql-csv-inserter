@@ -1,6 +1,6 @@
 # mysql-csv-inserter
 
-## About
+## About (日本語は下部に記載しています)
 
 This program imports CSV data to MySQL server.  
 The execution process is in the following order.
