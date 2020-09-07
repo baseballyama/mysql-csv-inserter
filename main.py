@@ -21,11 +21,11 @@ def main():
 
     try:
 
-        # extract exists gu_id.
         cursor = connection.cursor(buffered=True)
 
         try:
 
+            # extract exists gu_id.
             cursor.execute("SELECT %s FROM %s" % (Constants.TABLE_PRIMARY_KEY_NAME, Constants.TABLE_NAME))
             existsKeys = [item[0] for item in cursor.fetchall()]
 
