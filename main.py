@@ -25,8 +25,8 @@ def main():
 
             # delete exists rows.
             updatableKeys = []
+            columnName = get_csv_column_name(csv_data.keys().values, Constants.TABLE_PRIMARY_KEY_NAME)
             for index, row in csv_data.iterrows():
-                columnName = get_csv_column_name(row, Constants.TABLE_PRIMARY_KEY_NAME)
                 if row[columnName] in existsKeys:
                     updatableKeys.append(row[columnName])
             if len(updatableKeys) > 0:
@@ -56,9 +56,9 @@ def main():
         connection.close()
 
 
-def get_csv_column_name(row, key_name: str):
-    index = [key.lower() for key in row.keys()].index(key_name.lower())
-    return row.keys()[index]
+def get_csv_column_name(csv_column_names, key_name: str):
+    index = [key.lower() for key in csv_column_names].index(key_name.lower())
+    return csv_column_names[index]
 
 
 if __name__ == "__main__":
