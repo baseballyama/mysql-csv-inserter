@@ -21,7 +21,7 @@ def main():
 
     try:
 
-        cursor = connection.cursor(buffered=True)
+        cursor = connection.cursor(prepared=True)
 
         try:
 
@@ -49,7 +49,8 @@ def main():
                 cursor.execute(
                     "INSERT INTO %s (%s) VALUES (%s)" % (
                         Constants.TABLE_NAME, ",".join(row.keys().values),
-                        ",".join(["'" + item + "'" for item in row.values])))
+                        ",".join(["?" for _ in row.values])),
+                    tuple(row.values))
 
             # commit data
             connection.commit()
