@@ -25,7 +25,7 @@ def main():
 
         try:
 
-            # extract exists gu_id.
+            # extract exists primary keys.
             cursor.execute("SELECT %s FROM %s" % (Constants.TABLE_PRIMARY_KEY_NAME, Constants.TABLE_NAME))
             existsKeys = [item[0] for item in cursor.fetchall()]
 
