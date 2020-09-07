@@ -1,0 +1,7 @@
+HOST = "localhost"
+PORT = "5432"
+DATABASE_NAME = "database"
+USER = "user"
+PASSWORD = "password"
+TABLE_NAME = "table_name"
+TABLE_PRIMARY_KEY_NAME = "primary_key_name"
