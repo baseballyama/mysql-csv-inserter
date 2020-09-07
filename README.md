@@ -47,7 +47,11 @@ Directory Name : csv
 File Name : data.csv
 ```
 
-### 3. Execution
+### 3. Fix Constant Class
+
+Modify **_Constants.py_** according to your environment.
+
+### 4. Execution
 
 Execute with the following command.
 
@@ -104,7 +108,11 @@ CSV データを以下のディレクトリに以下のファイル名で格納�
 ファイル名 : data.csv
 ```
 
-### 3. 実行
+### 3. 定数クラスの修正
+
+**_Constants.py_** を環境に合わせて修正してください。
+
+### 4. 実行
 
 以下のコマンドで実行してください。
 
