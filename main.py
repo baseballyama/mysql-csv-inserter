@@ -40,8 +40,8 @@ def main():
             if len(updatableKeys) > 0:
                 deleteStatement = "DELETE FROM %s WHERE " % Constants.TABLE_NAME
                 for index in range(len(updatableKeys)):
-                    deleteStatement += (" OR " if (index > 0) else "") + "%s = %s" % (
-                        Constants.TABLE_PRIMARY_KEY_NAME, "%s")
+                    deleteStatement += (" OR " if (index > 0) else "") + "%s = ?" % (
+                        Constants.TABLE_PRIMARY_KEY_NAME)
                 cursor.execute(deleteStatement, updatableKeys)
 
             # insert data.
